@@ -1,5 +1,8 @@
 class PlacesController < ApplicationController
-
+    def index
+        @place = Place.all
+    end
+    
     def new
         @place = Place.new
     end
@@ -8,6 +11,10 @@ class PlacesController < ApplicationController
         @place = Place.new(params["place"])
         @place.save
         redirect_to "/places"
+    end
+
+    def show
+        @place = Place.find(params["id"])
     end
 
 end
