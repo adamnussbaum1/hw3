@@ -5,6 +5,7 @@
 <ul>
   <% for post in @place.posts %>
     <li><h3><%= "#{post.title}" %></h3></li>
+    <li><%= "#{post.posted_on}" %></li>
     <li><%= "#{post.description}" %></li>
   <% end %>
 </ul>
